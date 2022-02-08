@@ -28,7 +28,6 @@ int input(int *a, int *n) {
         if ((int *) p  != p) return 0;
     }
     if (getchar() != 10) return 0;
-    printf("Good!");
     return 1;
 }
 
