@@ -26,7 +26,7 @@ int input(int *a, int *n) {
         scanf("%d", p);
         if (!scanf("%d", p)) return 0;
         if ((int *) p  != p) return 0;
-        if (getchar() != 10) return 0;
+        if (getchar() == 10) return 0;
     }
     if (getchar() != 10) return 0;
     return 1;
