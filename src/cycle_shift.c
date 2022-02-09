@@ -41,7 +41,8 @@ void move(int *a, int *n, int *m) {
             arry[(*n - *m) + (p - a)] = *p;
         for (int *p = a; p - a < *n; p++)
             *p = arry[p - a];
-    } if (*m < 0) {
+    }
+    if (*m < 0) {
         for (int *p = &a[*n - (-1 * *m)]; p - a < *n; p++)
             arry[p - &a[*n - (-1 * *m)]] = *p;
         for (int *p = a; p - a < *n - (-1 * *m); p++)
