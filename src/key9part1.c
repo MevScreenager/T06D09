@@ -21,12 +21,12 @@ int main() {
 int input(int *a, int *n) {
     if (!scanf("%d", n)) return 0;
     if ((int *) n  != n) return 0;
+    if (*n < 0) return 0;
 
     for (int *p = a; p - a < *n; p++) {
-        scanf("%d", p);
         if (!scanf("%d", p)) return 0;
         if ((int *) p  != p) return 0;
-        if (getchar() == 10) return 0;
+        if (p - a < *n - 1 && getchar() == 10) return 0;
     }
     if (getchar() != 10) return 0;
     return 1;
@@ -42,7 +42,7 @@ int sum_numbers(int *buffer, int *length) {
 
 void find_numbers(int* buffer, int *length_in, int number, int *numbers, int *length_out) {
     for (int i = 0; i < *length_in; i++)
-        if (number % buffer[i] == 0) {
+        if (buffer[i] != 0 && number % buffer[i] == 0) {
             numbers[*length_out] = buffer[i];
             (*length_out)++;
         }
