@@ -23,10 +23,11 @@ int input(int *a, int *n, int *m) {
     for (int *p = a; p - a < *n; p++) {
         if (!scanf("%d", p)) return 0;
         if ((int *) p  != p) return 0;
+        if (getchar() == 10) return 0;
     }
     if (!scanf("%d", m)) return 0;
     if ((int *) m  != m) return 0;
-    if (getchar() == 10) return 0;
+    if (getchar() != 10) return 0;
     return 1;
 }
 
