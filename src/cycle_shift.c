@@ -26,7 +26,7 @@ int input(int *a, int *n, int *m) {
     }
     if (!scanf("%d", m)) return 0;
     if ((int *) m  != m) return 0;
-    if (getchar() != 10) return 0;
+    if (getchar() == 10) return 0;
     return 1;
 }
 
